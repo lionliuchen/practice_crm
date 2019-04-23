@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 引入EasyUI的CSS和JS -->
+<link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="../themes/icon.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+</head>
+<body>
+<div id="cc" class="easyui-layout" data-options="fit:true">
+		<div data-options="region:'north',title:'CRM管理系统',split:true" style="height:100px"></div>
+		<div data-options="region:'west',title:'系统菜单',split:true" style="width:200px;"></div>
+		<div data-options="region:'center',title:'数据区域',iconCls:'icon-ok'">
+			<table class="easyui-datagrid"
+					data-options="url:'datagrid_data1.json',method:'get',border:false,singleSelect:true,fit:true,fitColumns:true">
+				<thead>
+					<tr>
+						<th data-options="field:'itemid'" width="80">Item ID</th>
+						<th data-options="field:'productid'" width="100">Product ID</th>
+						<th data-options="field:'listprice',align:'right'" width="80">List Price</th>
+						<th data-options="field:'unitcost',align:'right'" width="80">Unit Cost</th>
+						<th data-options="field:'attr1'" width="150">Attribute</th>
+						<th data-options="field:'status',align:'center'" width="60">Status</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
